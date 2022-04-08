@@ -5,6 +5,12 @@
     color: black;          /* #цвет букв          */
 }
 
+.container02 {
+    width: 100%;
+    display: flex;
+    padding: 0 0px;  
+}
+
 /* на заголовок резюме 18px + жирность + цвет букв черный */
 /* на заголовки блоков 16px + жирность + цвет букв черный*/
 /* на текст блоков 16px + цвет букв черный*/
@@ -74,3 +80,53 @@
 
 /* font-size: 0.5rem;         #размер шрифта          */
 /* width: 100%;            #ширина полотна         */
+
+
+
+
+body {
+    font-family: 'Muli', sans-serif;
+    /* overflow: hidden; */
+    margin: 0;
+    /* background: #111; */
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    height: 20vh; /* 80 % от видимой части экрана */
+    border-radius: 20px;
+    margin: 10px;   /* отступы между различными слайдами */
+    cursor: pointer; /* при наведении на слайд отображает что с ним можно взаимодействовать */
+    color: #fff;
+    flex: 1; /* пропорционально растянем */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+  
+.slide h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0; /* убрать заголовки*/
+}
+  
+.slide.active { /* если слайд активен то */
+    flex: 10; /* мы хотим чтобы стал больше*/
+}
+  
+.slide.active h3 { /*стили к заголовку*/
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  
+}
+
+
+
