@@ -123,9 +123,95 @@ body {
   
 .slide.active h3 { /*стили к заголовку*/
     opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-  
+    transition: opacity 0.3s ease-in 0.4s;  
+}
+/*/////////////////////////////////////////////////////////*/
+.box22 {
+    padding-left: 0px; /*50*/
+    /* padding-right: 0px; */
+    margin: 0;
+    text-align: justify; /* выравнивание теста по ширине */
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #fff9ec;         /* цвет рамки*/
+    background: #fff9ec;
+
+    /* box-sizing: border-box; */
+    /* width: 100%; */
+
+    background-color: #e5e5e5;
+    /* display: flex; */
+    padding-top: 5rem;
+    justify-content: center;
+    overflow: hidden;
+    /* margin: 0; */
+    height: 200px;
 }
 
+.row {
+    display: flex;
+    width: 100%;
+    /* height: 300px; */
+    /* width: 600px; */
+    /* justify-content: center; */
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
 
+.col-header {
+    width: 150px;
+    box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+    border-radius: 20px;
+    padding: 0.8rem 1rem; /*0.8rem*/
+    color: #fff;
+}
+
+.item {
+    width: 150px;
+    height: 66px;
+    border: 1px solid #eee;
+    box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+    border-radius: 20px;
+    background: #f7f6f7;
+    padding: 0.8rem 1rem;
+    color: #828282;
+    text-align: center;
+    cursor: grab;
+}
+
+.item:active {
+    cursor: grabbing;
+}
+
+.placeholder {
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    width: 150px;
+    height: 66px;
+}
+  
+.start {
+    background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+}
+  
+.progress {
+    background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+}
+  
+.done {
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+  
+.hold {    
+    border: 3px solid #eee;
+}
+  
+.hide {
+    display: none; /* для исчезновения элемента */
+}
+  
+.hovered {
+    border-top: 2px solid #8ed7ed;    
+}
 
