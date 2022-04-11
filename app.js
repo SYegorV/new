@@ -113,3 +113,37 @@ function changeSlide(direction) {
     sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`
 }
 
+//      minigame:                    //////////////////////////////////////
+const board = document.querySelector('#board')
+const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'] //массив
+// const colors = ['red', 'blue', 'green', 'yellow', 'purple'] //массив
+const SQUARES_NUMBER = 144 // 450 квадратиков
+
+for (let i = 0; i < SQUARES_NUMBER; i++) {
+    const square = document.createElement('div') // какой тег нужно создать [div]
+    square.classList.add('square') // чтобы квадратик был квадратиком нужно добавить класс
+    // делее добавляем слушателя событий для каждого квадратика:
+    square.addEventListener('mouseover', () => setColor(square)) // вызывается при наведении мыши на квадрат
+    square.addEventListener('mouseleave', () => removeColor(square)) // убираем мышь 
+    board.append(square) //добавить в сам html
+}
+
+function setColor(element) {
+    const color = getRandomColor()
+    element.style.backgroundColor = color // параметр : случайный цвет из массива
+    // element.style.backgroundColor = 'red'
+    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}` // за счет обратных ковычек могу динамический цвет вставить + добавили светящийся эффект
+}
+
+function removeColor(element) {
+    element.style.backgroundColor = '#1d1d1d' //возвращаем цвет
+    element.style.boxShadow = `0 0 2px #000`
+}
+
+function getRandomColor() {
+    const index = Math.floor(Math.random() * colors.length)
+    return colors[index]
+}
+
+
+
