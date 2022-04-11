@@ -317,7 +317,49 @@ button:focus {
 
 
 
+/* minigame:                          /////////////////////////////////////////*/
 
+.box44 {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    padding-left: 0px;    
+    padding-top: 0px;
+    margin: 0px;    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #fff9ec;         /* цвет рамки*/
+    background: #fff9ec;
+    background-color: #111;    
+    height: 300px;    
+}
+
+.container44 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /*отобразить в браузере*/
+    max-width: 250px; /*максимальная ширина доски*/
+}
+
+
+.square {
+    width: 16px;
+    height: 16px;
+    background: #1d1d1d;
+    margin: 2px; /*отступ между квадратиками*/
+    box-shadow: 0 0 2px #000;
+    transition: 0.8s ease; /*анимация 2 сек*/
+}
+  
+.square:hover {
+    transition-duration: 0s; /*мы хотим добавление цвета без анимации*/
+}
+  
 
 
 
