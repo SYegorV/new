@@ -147,3 +147,103 @@ function getRandomColor() {
 
 
 
+//      gaming aim:                    //////////////////////////////////////
+const startBtn = document.querySelector('#start11')
+
+const screens = document.querySelectorAll('.screen')
+
+const timeList = document.querySelector('#time-list')
+
+const timeEl = document.querySelector('#time')
+const board11 = document.querySelector('#board11')
+let time = 0 // какую кнопку нажал и сколько времени нужно поместить?
+let score = 0
+
+startBtn.addEventListener('click', (event) => {
+    event.preventDefault() // удалили # отображающаяся в url браузера при клике
+    screens[0].classList.add('up') // screens это массив
+
+})
+
+timeList.addEventListener('click', event => {
+    if (event.target.classList.contains('time-btn')){ // contains а есть ли у элемента класс?
+        // console.log(event.target.getAttribute('data-time'))
+        // console.log(event.target)
+        time = parseInt(event.target.getAttribute('data-time')) // из строчки в число
+        screens[1].classList.add('up')
+        startGame() // функция для начала игры
+    }
+})
+
+// клик по кругу
+board11.addEventListener('click', event => {
+    if (event.target.classList.contains('circle')) {
+        score++
+        event.target.remove() // удалить круг
+        createRandomCircle() // вновь вызвать
+    }
+})
+
+
+
+//DEBUG
+//startGame()
+
+
+function startGame() {
+    //screens[1].classList.add('up') // перенесли в timeList
+    
+
+    setInterval(decreaseTime, 1000) //вызывать этот интервал каждую секунду 1000 [милисек]
+    // timeEl.innerHTML = `00:${time}`
+    createRandomCircle()
+    setTime(time)
+}
+
+function decreaseTime() {
+    if (time === 0) {
+        finishGame()
+    } else {
+        let current = --time        
+        if (current < 10) {
+            current = `0${current}`
+        }
+        //timeEl.innerHTML = `00:${current}` // отлично время отображается
+        setTime(current)
+    }    
+}
+
+function setTime(value) {
+    timeEl.innerHTML = `00:${value}`
+}
+
+function finishGame() {
+    timeEl.parentNode.classList.add('hide') // на ваше усмотрение // удалить заголовок со временем
+    //timeEl.parentNode.remove() // удалить заголовок со временем
+    board11.innerHTML = `<h1> счет: <span class="primary"> ${score} </span> </h1>`
+
+}
+
+function createRandomCircle() {
+    const circle = document.createElement('div')
+    const size = getRandomNumber(10, 60)
+    // диструктиризация: {}
+    const {width, height} = board11.getBoundingClientRect() // ориентир от размера 
+    const x = getRandomNumber(0, width-size) // 150
+    const y = getRandomNumber(0, height-size) // 200
+    circle.classList.add('circle')
+    circle.style.width = `${size}px` // '15px'
+    circle.style.height = `${size}px` // '15px'
+    circle.style.top = `${y}px`
+    circle.style.left = `${x}px` // по горизонтали 
+
+    board11.append(circle)
+}
+
+function getRandomNumber(min, max) {
+    return Math.round(Math.random() * (max - min) + min)
+}
+
+
+
+
