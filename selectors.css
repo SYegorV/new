@@ -471,6 +471,162 @@ h1 {
     cursor: pointer;
 }
 
+/* calculate:                          /////////////////////////////////////////*/
+
+.box66 {
+    box-sizing: border-box;
+    color: #fff;
+    /*height: 100vh;*/
+    overflow: hidden; /* чтобы не было видно других экранов */
+    text-align: center;
+
+    padding-left: 0px;    
+    padding-top: 0px;
+    margin: 0px;    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #fff9ec;         /* цвет рамки*/
+    background: #fff9ec;
+    background-color: #e5e5e5;    
+    /*height: 300px;*/
+    
+    /*width: 840px;*/                /* #ширина полотна         */
+    height: 420px;                /* высота рамки */  
+}
+
+.navbar1 {    
+    border-width: 1px;               /* ширина рамки                                    */
+    border-style: solid;             /* сплошная рамка в сочетании с border-width: 1px; */
+    border-color: blue;         /* цвет рамки                                      */     
+    background-color: white;
+    width: 420px;                     /* #ширина полотна         */
+    height: 400px;                /* высота рамки */
+    margin: 6px ;                  /* отступ от рамки*/
+}
+
+.navbar2 {    
+    border-width: 1px;               /* ширина рамки                                    */
+    border-style: solid;             /* сплошная рамка в сочетании с border-width: 1px; */
+    border-color: black;         /* цвет рамки                                      */ 
+    background: #485563;           /* цвет всего заднего фона frame                   */
+    width: 370px;                    /* #ширина полотна         */
+    height: 60px;                 /* высота рамки */
+    margin-top: 25px ;              /* отступ от рамки*/
+    font-size: 22px;                  /* #размер шрифта          */
+    color: #16D9E3;                /* #цвет букв          */
+    text-align: right;
+}
+
+.navbar3 {
+    margin-top: 10px ;           /* отступ от рамки*/
+}
+
+.container66 {    
+    display: flex;                  /* в сочетании рамка по центру: */
+    flex-direction: column;     
+    align-items: center;
+}
+
+.time-btn66 {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    width: 40px;                       /* #ширина кнопки         */    
+    height: 40px;                    /* высота кнопки */
+    text-align: center;    
+}
+
+.time-btn66:hover {
+    border: 1px solid #16D9E3;
+    color: #16D9E3;
+}
+.time-btn66None {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 40px;                       /* #ширина кнопки         */
+    height: 40px;                    /* высота кнопки */
+}  
+.time-btn66None:hover {
+    border: 1px solid white;
+    color: white;
+}
+.time-btn66-navbar0 {
+    background-color: transparent;    
+    color: black;                        /* #цвет букв            */
+    cursor: pointer;                        /* #курсор при наведении */
+    font-family: inherit;    
+    font-size: 14px;
+    width: 40px;                             /* #ширина кнопки         */
+    height: 40px;                              /* высота кнопки */
+    background: #485563;                   /* цвет всего заднего фона frame                   */
+    border-width: 1px;                      /* ширина рамки                                    */
+    border-style: solid;                          /* сплошная рамка в сочетании с border-width: 1px; */
+    border-color: rgba(255, 255, 255);         /* цвет рамки  and прозрачность   */
+}  
+.time-btn66-navbar0:hover {
+    border: 1px solid #16D9E3;
+    color: #16D9E3;
+}
+.time-btn66-navbar1 {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;                         /* #цвет букв            */
+    cursor: pointer;                          /* #курсор при наведении */
+    font-family: inherit;    
+    font-size: 14px;
+    width: 40px;                              /* #ширина кнопки         */
+    height: 95px;                          /* высота кнопки */
+}  
+.time-btn66-navbar1:hover {
+    border: 1px solid #16D9E3;
+    color: #16D9E3;
+}
+.time-btn66-navbar2 {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;                     /* #цвет букв            */
+    cursor: pointer;                     /* #курсор при наведении */
+    font-family: inherit;    
+    font-size: 14px;
+    width: 40px;                          /* #ширина кнопки         */
+    height: 40px;                         /* высота кнопки */
+}
+.time-btn66-navbar2:hover {
+    border: 1px solid #16D9E3;
+    color: #16D9E3;
+}
+
+.time-list660 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.time-list660 td {
+    margin: 7px;                        /* отступ между кнопками*/
+}
+.dispflex {
+    display: flex;
+}
+.time-list661 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.time-list661 td {
+    margin: 6px;                        /* отступ между кнопками*/
+}
+output {    
+    justify-content: right;
+    text-align: justify;                 /* выравнивание теста по ширине */  
+    padding-right: 10px;    
+}
+
+
 
 
 
