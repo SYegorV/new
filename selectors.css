@@ -627,6 +627,169 @@ output {
 }
 
 
+/* privat:                          /////////////////////////////////////////*/
+.box77 {    
+    box-sizing: border-box;
+    color: black;          /* #цвет букв          */
+    /*height: 100vh;*/
+    overflow: hidden; /* чтобы не было видно других экранов */
+    text-align: center;
+    font-size: 16px;         /* #размер шрифта          */
+    padding-left: 0px;    
+    padding-top: 0px;
+    margin: 0px;    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #1635e3;         /* цвет рамки*/
+    background: rgb(200, 255, 255); /* цвет всего заднего фона*/
+    /*background-color: #e5e5e5;*/    
+    /*height: 300px;*/
+    
+    /*width: 840px;*/                /* #ширина полотна         */
+    height: 1000px;                /* высота рамки */  
+}
+
+
+.b77ox {        
+    text-align: center; /*  */
+    width: 450px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;    
+    justify-content: right;
+}
+
+.n77avbar {
+    width: 450px;
+    text-align: justify; /* выравнивание теста по ширине */
+}
+
+.b77ox1 {        
+    margin-left: 316px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    color: black;
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px;   
+}
+
+.b77ox1:hover {
+    border: 1px solid #84fab0;
+    color: white;
+}
+
+.b77ox2 {
+    width: 225px;
+    color: #1635e3;
+    border: 2px solid #1635e3;
+    font-family: inherit;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px;    
+    height: 30px;
+    border-radius: 10px;
+}
+
+.b77ox2:hover {
+    border: 2px solid #84fab0;
+    color: white;
+}
+
+.c77ontainer88 {
+    display: flex;                  /* в сочетании рамка по центру: */
+    flex-direction: column;     
+    align-items: center;
+    margin-top: 5px;
+}
+
+.b77ox3 {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    width: 450px;
+    height: 150px;
+}
+
+.b77ox4 {
+    width: 450px;
+    text-align: center; /*  */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.b77ox5 {
+    width: 450px;
+    text-align: center; /*  */
+    font-size: 14px;
+    color: darkviolet;
+}
+
+.b77ox6 {
+    text-align: center; /*  */    
+    width: 450px;
+    margin-top: 5px;
+}
+
+.b77ox7 {
+    width: 450px;
+    text-align: center; /*  */
+    font-size: 18px;
+}
+
+.b77ox8 {    
+    text-align: justify; /* выравнивание теста по ширине */
+    font-size: 16px;
+    padding: 0px;
+    margin-top: 5px;    
+    width: 450px;
+    border-width: 1px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-color: rgb(200, 255, 255);         /* цвет рамки*/
+    background: white;
+}
+
+.t77ime-btnOne {
+    background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0px;
+    font-size: 16px;
+    width: 225px;
+    height: 30px;
+    border-radius: 10px;
+}
+  
+.t77ime-btnOne:hover {
+    border: 2px solid #16D9E3;
+    color: white;
+}
+
+.t77ime-btnTwo {
+    background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0px;
+    font-size: 16px;
+    width: 225px;
+    height: 30px;
+    border-radius: 10px;
+}
+  
+.t77ime-btnTwo:hover {
+    border: 2px solid #16D9E3;
+    color: white;
+}
+
 
 
 
