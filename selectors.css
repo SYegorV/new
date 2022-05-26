@@ -544,6 +544,28 @@ h1 {
     border: 1px solid #16D9E3;
     color: #16D9E3;
 }
+
+.time-btn66one {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    width: 40px;                       /* #ширина кнопки         */    
+    height: 40px;                    /* высота кнопки */
+    text-align: center;    
+    box-sizing: border-box;    
+    display: block;
+    float: bottom;/**/    
+    margin-bottom: 15px;/**/   
+}
+
+.time-btn66one:hover {
+    border: 1px solid #16D9E3;
+    color: #16D9E3;
+}
+
 .time-btn66None {
     background-color: transparent;
     border: 1px solid white;
@@ -555,6 +577,23 @@ h1 {
     border: 1px solid white;
     color: white;
 }
+
+.time-btn66Noneone {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 40px;                       /* #ширина кнопки         */
+    height: 40px;                    /* высота кнопки */
+    box-sizing: border-box;    
+    display: block;
+    float: bottom;/**/    
+    margin-bottom: 15px;/**/ 
+}  
+.time-btn66Noneone:hover {
+    border: 1px solid white;
+    color: white;
+}
+
 .time-btn66-navbar0 {
     background-color: transparent;    
     color: black;                        /* #цвет букв            */
@@ -580,7 +619,8 @@ h1 {
     font-family: inherit;    
     font-size: 14px;
     width: 40px;                              /* #ширина кнопки         */
-    height: 95px;                          /* высота кнопки */
+    /*height: 95px;                          /* высота кнопки */
+    box-sizing: border-box; 
 }  
 .time-btn66-navbar1:hover {
     border: 1px solid #16D9E3;
@@ -605,9 +645,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 0px;
 }
 .time-list660 td {
-    margin: 7px;                        /* отступ между кнопками*/
+    margin: 6.5px;                        /* отступ между кнопками*/
 }
 .dispflex {
     display: flex;
@@ -616,9 +657,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 0px;
 }
 .time-list661 td {
-    margin: 6px;                        /* отступ между кнопками*/
+    margin: 6.5px;                        /* отступ между кнопками*/
 }
 output {    
     justify-content: right;
