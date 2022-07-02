@@ -35,6 +35,19 @@
         <div class="box0">
             Резюме
         </div>
+        
+        <div class="box1111">
+            <a href="#chapter"> Резюме </a>
+            <a href="#chapter_one"> Образование </a>
+            <a href="#chapter_two"> Опыт работы </a>
+            <a href="#chapter_three"> Навыки </a>            
+            <a href="#chapter_7"> minigame </a>       
+            <a href="#chapter_8"> gaming aim </a>
+            <a href="#chapter_9"> calculate </a>
+            <a href="#chapter_10"> privat </a>
+            <a href="#chapter_13"> česká </a>
+        </div>
+        
         <br>
         <div class="navbar">
             <table class="table" width="496">
@@ -525,6 +538,32 @@
         </div>
 
         <br>
+        
+        <!-- pixi one -->
+        <div class="box88" id="juego">
+
+        </div>
+
+        <br>
+
+        <!-- pixi two -->
+        <div class="box99" id="bloo">
+
+        </div>
+
+        <br>
+
+        <!-- česká one : -->
+        <div class="box111" id="chapter_13">
+            <br>
+            <a href="index10.html" target="_blank"> Theme one </a>
+            <br>
+            <br>
+            <a href="index13.html" target="_blank"> Theme two </a>
+
+        </div>
+
+        <br>
 
         
         
@@ -535,7 +574,19 @@
         
         
         
-    </div>    
+    </div>  
+    
+    <script type="text/javascript">
+        let type = "WebGL"
+        if (!PIXI.utils.isWebGLSupported()) {
+            type = "canvas"
+        }
+    
+        PIXI.utils.sayHello(type)
+    </script>
+    
+    <script src="pixi.min.js"></script>
+    <script src="appapp.js"></script>
     <script src="app.js"></script>    
 </body>
 </html>
