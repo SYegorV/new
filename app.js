@@ -564,3 +564,285 @@ function asdf() {
 
 
 
+//      pixi one:                    //////////////////////////////////////
+let width = 600;
+let height = 600;
+
+let Application = PIXI.Application,
+loader = PIXI.loader,
+resources = PIXI.loader.resources,
+Text = PIXI.Text,
+TextStyle = PIXI.TextStyle,
+Graphics = PIXI.Graphics,
+renderer = PIXI.autoDetectRenderer(width, height);
+
+let game = new PIXI.Application({width:width, height:height}); // ширина высота
+game.renderer.backgroundColor=0x061639;
+game.renderer.autoRezise = true;
+document.getElementById("juego").appendChild(game.view); //to jobing (^_^)
+
+let principal;
+let enemigos=[];
+let velocidadGeneraEnemigos = 100;
+let cuentaInfinita=0; //for increment
+let velocidaEstandarEnemigo = 1;
+let velocidadEnemigo = 1;
+let velocidadPrincipal = 4; // скорость перемещения кубика 1-5-10
+
+setup(); // вызов функции setup
+function setup(delta){
+    //  console.log("setup");
+
+    principal = jugador(); // вызов функции из файла appapp.js and присвоение переменной principal
+    game.stage.addChild(principal);
+
+    // let anchoPersonaje = 64;
+    // let altoPersonaje = 64;
+    // let posx = (renderer.width/2); // -(anchoPersonaje/2); // сдвиг квадрата от центра холста
+    // let posy = renderer.height-altoPersonaje;
+    // let rectangle = new Graphics();
+    // rectangle.lineStyle(4, 0xFF3300, 1);
+    // rectangle.beginFill(0x66CCFF);
+    // rectangle.drawRect(0, 0, anchoPersonaje, altoPersonaje);
+    // rectangle.endFill();
+    // rectangle.x = posx;
+    // rectangle.y = posy;
+    // rectangle.vx = 0;
+    // rectangle.vy = 0;
+    // game.stage.addChild(rectangle); // отображение на холсте
+
+    let left = keyboard("ArrowLeft"),
+    right = keyboard("ArrowRight");
+    down = keyboard("ArrowDown");
+    left.press = () => { // движение в лево
+        principal.vx = -velocidadPrincipal;
+        principal.vy = 0;
+    }
+    left.release = () => {
+        principal.vx = 0;
+        principal.vy = 0;
+    }
+    right.press = () => { // движение в право
+        principal.vx = velocidadPrincipal; // without plus +
+        principal.vy = 0;
+    }
+    right.release = () => {
+        principal.vx = 0;
+        principal.vy = 0;
+    }
+    down.press = () => { // движение random кубиков в низ
+        velocidadEnemigo += 10;
+        velocidadGeneraEnemigo = 10;
+    }
+    down.release = () => {
+        velocidadEnemigo = velocidaEstandarEnemigo; // = velocidadEnemigo ---( ускорение random кубиков при нажатии непрерывно)  // = velocidaEstandarEnemigo ---( ускорение при нажатии клавиши down)
+        velocidadGeneraEnemigo = 100;;
+    }
+
+    state = play;
+
+    game.ticker.add(delta => gameLoop(delta)); // вызов функции gameLoop внутри функции - (постоянный вызов)
+}
+function gameLoop(delta){
+    //  console.log("gameLoop");
+
+    cuentaInfinita++; //increment
+    if ((cuentaInfinita % velocidadGeneraEnemigos) == 0){ // управление появлением случайных квадратиков 
+        game.stage.addChild(boots()); // вызов функции из файла appapp.js and отображение на холсте - (случайное заполнение квадратов)
+    }
+    for (let index = 1; index<enemigos.length; index++){ // квадратики движутся 
+        enemigos[index].vy = enemigos[index].vy + velocidadEnemigo;
+        enemigos[index].y = enemigos[index].vy;
+    }
+    state(delta); // вызов функции play
+}
+
+function play(delta) {
+    principal.x += principal.vx;
+    principal.y += principal.vy;
+
+    for(let index = 1; index < enemigos.length; index++) {
+        if (hitTestRectangle(enemigos[index], principal)) {
+            //  console.log("Choco"); // отображение времени соприкосновения с кубиком
+            //  game.stop(); //при соприкосновении stop game
+        } else {
+
+        }
+    }
+}
+
+
+
+
+//      pixi two:                    //////////////////////////////////////
+// let width99 = 600;
+// let height99 = 600;
+
+// let Application = PIXI.Application,
+// loader = PIXI.loader,
+// resources = PIXI.loader.resources,
+// Text = PIXI.Text,
+// TextStyle = PIXI.TextStyle,
+// Graphics = PIXI.Graphics,
+// renderer = PIXI.autoDetectRenderer(width, height);
+
+let zxc = new PIXI.Application({width:width, height:height}); // ширина высота
+zxc.renderer.backgroundColor=0x061639; //color holst
+zxc.renderer.autoRezise = true;
+document.getElementById("bloo").appendChild(zxc.view); //to jobing (^_^)
+
+
+let sphera = new Graphics();
+
+let char2Sprite = PIXI.Sprite.from('sphera.png') // написание в одну строчку
+char2Sprite.width = 300; // размер
+char2Sprite.height = 300;
+let possx = (renderer.width/2)-(char2Sprite.width/2); // -(char1Sprite.width/2); // сдвиг квадрата от центра холста
+let possy = (renderer.height/2)-130;//-(char2Sprite.height/2);
+char2Sprite.x = possx;
+char2Sprite.y = possy;
+zxc.stage.addChild(char2Sprite); // отображение на холсте
+char2Sprite.anchor.set(0.5);
+char2Sprite.scale.set(2.0);
+char2Sprite.x = zxc.screen.width / 2;
+char2Sprite.y = zxc.screen.height / 2; // -20;
+zxc.ticker.add(function(delta) {
+    char2Sprite.rotation-=0.01*delta;
+});
+
+let rectangle = new Graphics();
+
+let char1Sprite = PIXI.Sprite.from('turtle.PNG') // написание в одну строчку
+char1Sprite.width = 100 // размер
+char1Sprite.height = 100
+let posx = (renderer.width/2)-(char1Sprite.width)-50; // -(char1Sprite.width/2); // сдвиг квадрата от центра холста
+let posy = (renderer.height/2)-(char1Sprite.height/2);
+char1Sprite.x = posx;
+char1Sprite.y = posy;
+// rectangle.beginFill(0xAA33BB)
+// .lineStyle(4, 0xFFEA00, 1) //рамка на прямоугольнике
+// rectangle.drawRect(200, 200, 100, 150) //позиция 200 200 , ширина 100 высота 150
+// rectangle.endFill()
+zxc.stage.addChild(char1Sprite); // отображение на холсте
+
+let turtle = new Graphics();
+
+let char3Sprite = PIXI.Sprite.from('turtle.PNG') // написание в одну строчку
+char3Sprite.scale.set(0.2, 0.2) // размер
+// char3Sprite.width = 150 // размер
+// char3Sprite.height = 150
+let pposx = (renderer.width/2 - char3Sprite.width/2);//-350; // -(char1Sprite.width/2); // сдвиг квадрата от центра холста
+let pposy = (renderer.height/2 - char3Sprite.height/2);//-180;//-(char1Sprite.height/2);
+char3Sprite.x = pposx;
+char3Sprite.y = pposy;
+zxc.stage.addChild(char3Sprite); // отображение на холсте
+
+char3Sprite.anchor.set(0.5); //равномерное увеличение во все стороны
+char3Sprite.x = zxc.screen.width / 2 -220;
+char3Sprite.y = zxc.screen.height / 2 -220;
+
+char3Sprite.interactive = true // клик с увеличением картинки
+    char3Sprite.buttonMode = true // смена курсора как кнопка
+    char3Sprite.on('pointerdown', function(){
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.21, 0.21) // размер   
+        }, 150)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.22, 0.22) // размер   
+        }, 200)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.23, 0.23) // размер   
+        }, 250)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.24, 0.24) // размер   
+        }, 300)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.25, 0.25) // размер   
+        }, 350)
+        setTimeout(() => {             
+            char3Sprite.scale.set(0.26, 0.26) // размер   
+        }, 400)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.27, 0.27) // размер   
+        }, 450)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.28, 0.28) // размер   
+        }, 500)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.29, 0.29) // размер   
+        }, 550)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.3, 0.3) // размер   
+        }, 600)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.31, 0.31) // размер   
+        }, 650)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.32, 0.32) // размер
+        }, 700)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.31, 0.31) // размер   
+        }, 750)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.3, 0.3) // размер   
+        }, 800)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.29, 0.29) // размер   
+        }, 850)
+        setTimeout(() => {             
+            char3Sprite.scale.set(0.28, 0.28) // размер   
+        }, 900)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.27, 0.27) // размер   
+        }, 950)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.26, 0.26) // размер   
+        }, 1000)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.25, 0.25) // размер   
+        }, 1050)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.24, 0.24) // размер   
+        }, 1100)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.23, 0.23) // размер   
+        }, 1150)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.22, 0.22) // размер   
+        }, 1200)
+        setTimeout(() => {           
+            char3Sprite.scale.set(0.21, 0.21) // размер   
+        }, 1250)
+        setTimeout(() => {            
+            char3Sprite.scale.set(0.2, 0.2) // размер        
+        }, 1300)    
+    })
+
+    
+let thing = new Graphics();
+zxc.stage.addChild(thing);
+thing.x = 600/2;
+thing.y = 600/2;
+let count = 0;
+zxc.ticker.add(() => {
+    count += 0.1;
+    thing.clear();
+    // thing.lineStyle(10, 0xff0000, 1); //цвет рамки прозрачного окна
+    thing.beginFill(0x8bc5ff, 0.5) // прозрачность окна
+    // thing.beginFill(0xffFF00, 0.5) // прозрачность окна
+
+    thing.moveTo(-100 + Math.sin(count)*20, -100 + Math.cos(count)*20); //движение вершин по окружности
+    thing.lineTo(100 + Math.cos(count)*20, -100 + Math.sin(count)*20);
+    thing.lineTo(100 + Math.sin(count)*20, 100 + Math.cos(count)*20);
+    thing.lineTo(-100 + Math.cos(count)*20, 100 + Math.sin(count)*20);
+    thing.lineTo(-100 + Math.sin(count)*20, -100 + Math.cos(count)*20);
+    thing.closePath();
+    thing.rotation = count * 0.1; //движение окна по окружности    
+});
+
+
+
+
+
+
+
