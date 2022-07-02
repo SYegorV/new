@@ -5,6 +5,32 @@
     color: black;          /* #цвет букв          */
 }
 
+.box1111 {
+    /*width: 250px;/**/
+    padding-left: 20px;
+    padding-right: 20px;
+    /*height: 700px; /**/
+    /*background: coral; /**/
+    /*background: rgb(200, 255, 255); /* цвет всего заднего фона*/
+    color: rgb(130, 10, 230);          /* #цвет букв          */
+    /*position: static; /**/
+    /*position: absolute;/**/
+    top: 0px; /* */
+    left: 750px;/* */
+
+    position: fixed; /* позиционирование прокрутки на экране */ 
+    /*z-index: 0; /**/
+
+    display: flex; /* в сочетании рамка по центру: */
+    flex-direction: column;  /*   */
+    align-items: center; /*     */
+    /*justify-content: center; /**/
+}
+.box1111 a {
+    color: rgb(130, 10, 230);          /* #цвет букв          */
+    text-decoration: none; /* del line */
+}
+
 .container02 {
     width: 100%;
     display: flex;
@@ -831,6 +857,92 @@ output {
     border: 2px solid #16D9E3;
     color: white;
 }
+
+
+
+
+
+/* pixi one:                          /////////////////////////////////////////*/
+.box88 {    
+    box-sizing: border-box;
+    /*color: black;          /* #цвет букв          */
+    /*height: 100vh;*/
+    /*overflow: hidden; /* чтобы не было видно других экранов */
+    text-align: center;
+    font-size: 16px;         /* #размер шрифта          */
+    padding-left: 0px;    
+    padding-top: 0px;
+    margin: 0px;    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #1635e3;         /* цвет рамки*/
+    background: #061639;            /* rgb(200, 255, 255); /* цвет всего заднего фона */      /* 0x061639 */
+    /*background-color: #e5e5e5;*/    
+    /*height: 300px;*/
+    
+    /*width: 840px;*/                /* #ширина полотна         */
+    height: 604px;                /* высота рамки */  
+}
+
+canvas { /* по центру: */
+    margin: auto;
+    display: block;
+}
+
+/* pixi two:                          /////////////////////////////////////////*/
+.box99 {    
+    box-sizing: border-box;
+    /*color: black;          /* #цвет букв          */
+    /*height: 100vh;*/
+    /*overflow: hidden; /* чтобы не было видно других экранов */
+    text-align: center;
+    font-size: 16px;         /* #размер шрифта          */
+    padding-left: 0px;    
+    padding-top: 0px;
+    margin: 0px;    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #1635e3;         /* цвет рамки*/
+    background: #061639;            /* rgb(200, 255, 255); /* цвет всего заднего фона */      /* 0x061639 */
+    /*background-color: #e5e5e5;*/    
+    /*height: 300px;*/
+    
+    /*width: 840px;*/                /* #ширина полотна         */
+    height: 604px;                /* высота рамки */  
+}
+
+/* česká one :                          /////////////////////////////////////////*/
+.box111 {           
+    /*height: 100vh;*/    
+    text-align: center;
+    font-size: 24px;         /* #размер шрифта          */
+    padding-left: 0px;    
+    padding-top: 0px;
+    margin: 0px;    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    border-radius: 10px;
+    border-color: #1635e3;         /* цвет рамки*/
+    background: rgb(200, 255, 255); /* цвет всего заднего фона*/
+    height: 1000px;                /* высота рамки */    
+}
+
+.box111 a {
+    color: rgb(130, 10, 230);          /* #цвет букв          */
+    text-decoration: none; /* del line */
+}
+
+.box111 a:hover {
+    color: #16D9E3;
+} 
+
+
+
+
+
+
 
 
 
