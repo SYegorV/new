@@ -1,0 +1,189 @@
+.container {    
+    font-size: 24px;         /* #размер шрифта          */    
+    color: black;          /* #цвет букв          */ 
+    display: flex; /* в сочетании рамка по центру: */
+    flex-direction: column;     
+    align-items: center;
+}
+
+.btn1 {        
+    /* margin-left: 316px; */
+    /* text-align: right; */
+    
+    
+    width: 225px;
+    height: 30px;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    color: black;
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0px;   
+}
+
+.btn1:hover {
+    border: 1px solid #84fab0;
+    color: white;
+}
+
+.btn2 {          
+    
+    width: 840px;
+    height: 30px;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    color: black;
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0px;   
+}
+
+.btn2:hover {
+    border: 1px solid #84fab0;
+    color: white;
+}
+
+.abtn2 {
+    padding-left: 230px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #16D9E3;
+}
+
+.btn3 {        
+    margin-left: 500px;
+    /* text-align: right; */
+    
+    
+    width: 225px;
+    height: 30px;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    color: black;
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0px;   
+}
+
+.btn3:hover {
+    border: 1px solid #84fab0;
+    color: white;
+}
+
+.navbar0 {    
+    /*border-width: 1px;               /* ширина рамки                                    */
+    /*border-style: solid;             /* сплошная рамка в сочетании с border-width: 1px; */
+    /*border-color: blue;         /* цвет рамки                                      */     
+    width: 2000px;            /* #ширина полотна         */
+    /*height: 1400px;                /* высота рамки */    
+
+    display: flex; /* в сочетании рамка по центру: */
+    flex-direction: column;     
+    align-items: center;
+}
+
+.table00 {    
+    border-width: 2px;          /* ширина рамки */
+    border-style: solid;        /* сплошная рамка в сочетании с border-width: 2px; */
+    /*border-color: #db4910;    /*     цвет рамки */
+    border-color: white;     /*   цвет рамки */
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    /* background: #14e4e4; */
+    background: white;
+
+    padding: 0px;
+    margin: 10px; 
+
+    /*width: 1000px;*/
+}
+
+/*.navbar2 {    */
+/*    border-width: 1px;               /* ширина рамки                                    */
+  /*  border-style: solid;             /* сплошная рамка в сочетании с border-width: 1px; */
+/*    border-color: black;         /* цвет рамки                                      */ 
+/*    background: #485563;           /* цвет всего заднего фона frame                   */
+/*    width: 370px;            /* #ширина полотна         */
+ /*   height: 60px;                /* высота рамки */
+   /* margin-top: 25px ;           /* отступ от рамки*/
+    /*font-size: 22px;         /* #размер шрифта          */
+    /*color: #16D9E3;          /* #цвет букв          */
+    /*text-align: right; */
+/*} */
+
+/*output {     */
+  /*  justify-content: right; */
+    /*text-align: justify; /* выравнивание теста по ширине */  
+    /*padding-right: 10px;    */
+/*} */
+
+/* true : false : */
+.navbar3 {    
+    margin-left: 2px; 
+    border-width: 1px;               /* ширина рамки                                    */
+    border-style: solid;             /* сплошная рамка в сочетании с border-width: 1px; */
+    border-color: black;         /* цвет рамки                                      */ 
+    background: #485563;           /* цвет всего заднего фона frame                   */
+    width: 100px;            /* #ширина полотна         */
+    height: 38px;                /* высота рамки */
+    /*margin-top: 25px ;           /* отступ от рамки*/
+    font-size: 22px;         /* #размер шрифта          */
+    color: #16D9E3;          /* #цвет букв          */
+    text-align: right;
+}
+
+.navbar4 {
+    display: flex; /* в сочетании рамка по центру: */
+}
+
+outputone {        
+    justify-content: right;
+    text-align: justify; /* выравнивание теста по ширине */  
+    padding: 0px;    
+}
+
+
+
+/* button : */
+.box1 {        
+    margin-right: 2px; 
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    color: black;
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px;   
+}
+
+.box1:hover {
+    border: 1px solid #84fab0;
+    color: white;
+}
+
+.box3 {
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+    width: 400px;
+    height: 36px;
+}
+
+.box6 {
+    display: flex;
+}
+
+
+oneput {     
+    color: white;          /* #цвет букв          */    
+} 
